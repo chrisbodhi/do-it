@@ -1,0 +1,20 @@
+!!!
+%html
+%head
+  %title
+    DoIt
+  %stylesheet_link_tag{href: "application.css", media: "all"}
+  %javascript_include_tag{href: "application.js"}
+  %csrf_meta_tags
+
+%body
+  %h2 
+    Kia of Austin
+  - if notice || alert
+    .row
+      .large-12.columns
+        %p.notice= notice
+        %p.alert= alert
+
+  =yield
+
